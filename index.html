@@ -2,8 +2,8 @@
     function RB(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
-    w.moveTo(RB(0, screen.width), RB(0, screen.height));
     var w = window.open('index.html','','HEIGHT=100,WIDTH=100');
+    w.moveTo(RB(0, screen.width), RB(0, screen.height));
     var s = 0;
     function check() {
         if(s == 1) return null;
